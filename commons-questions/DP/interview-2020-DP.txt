@@ -1,0 +1,5 @@
+DP :
+	1. Explain Singleton desing Pattern, which one is best and why?
+	2. Expalin Real life scenario where you used Decorator and why?
+	3. Explain the Observer Design pattern
+	4. Explainn the Template Design Pattern

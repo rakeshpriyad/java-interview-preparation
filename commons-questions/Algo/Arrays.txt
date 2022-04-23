@@ -1,0 +1,117 @@
+https://www.geeksforgeeks.org/number-subarrays-product-less-k/
+https://www.geeksforgeeks.org/find-the-element-before-which-all-the-elements-are-smaller-than-it-and-after-which-all-are-greater-than-it/
+https://www.geeksforgeeks.org/equilibrium-index-of-an-array/
+https://www.geeksforgeeks.org/find-a-repeating-and-a-missing-number/
+https://www.geeksforgeeks.org/largest-sum-contiguous-subarray/
+https://www.geeksforgeeks.org/maximum-subarray-sum-using-divide-and-conquer-algorithm/
+https://www.geeksforgeeks.org/kth-smallestlargest-element-unsorted-array/
+https://www.geeksforgeeks.org/k-largestor-smallest-elements-in-an-array/
+https://www.geeksforgeeks.org/largest-sum-subarray-least-k-numbers/
+https://www.geeksforgeeks.org/leaders-in-an-array/
+https://www.geeksforgeeks.org/trapping-rain-water/
+https://www.geeksforgeeks.org/find-subarray-with-given-sum-in-array-of-integers/?ref=rp
+https://www.geeksforgeeks.org/rearrange-given-array-place/
+https://www.geeksforgeeks.org/find-the-missing-number/
+https://www.geeksforgeeks.org/chocolate-distribution-problem/
+https://www.geeksforgeeks.org/number-subarrays-product-less-k/
+https://www.geeksforgeeks.org/kth-smallestlargest-element-unsorted-array/
+
+
+
+
+
+
+
+
+
+
+
+
+
+1. Reverse an array without affecting special characters
+public static void reverse(char str[]) {
+        // Initialize left and right pointers
+        int r = str.length - 1, l = 0;
+        // Traverse string from both ends until  'l' and 'r'
+        while (l < r) {
+            // Ignore special characters
+            if (!Character.isAlphabetic(str[l]))
+                l++;
+            else if (!Character.isAlphabetic(str[r]))
+                r--;            // Both str[l] and str[r] are not spacial
+            else {
+                char tmp = str[l];
+                str[l] = str[r];
+                str[r] = tmp;
+                l++;
+                r--;
+            }
+        }
+    }
+2. Length of the largest subarray with contiguous elements | Set 1
+	
+https://medium.com/@codingfreak
+https://medium.com/@codingfreak/huge-collection-of-array-interview-questions-e87ac7c34e62
+
+Find pair with given sum in an array: 
+https://www.techiedelight.com/find-pair-with-given-sum-array/
+a. O(nlogn) solution:
+The idea is to sort the given array in ascending order and maintain search space by maintaining two indices (low and high) that initially points to two end-points of the array. Then we loop till low is less than high index and reduce search space 
+
+		// sort the array in ascending order
+		Arrays.sort(A);
+		// maintain two indices pointing to end-points of the array
+		int low = 0;
+		int high = A.length - 1;
+		// reduce search space arr[low..high] at each iteration of the loop loop till low is less than high
+		while (low < high) 	{
+			// sum found
+			if (A[low] + A[high] == sum)	{
+				System.out.println("Pair found");
+				return;
+			}
+
+			// increment low index if total is less than the desired sum
+			// decrement high index is total is more than the sum
+			if (A[low] + A[high] < sum) {
+				low++;
+			} else{
+				high--;
+			}
+		}
+
+		// No pair with given sum exists in the array
+		System.out.println("Pair not found");
+	}
+b. O(n) solution using Hashing
+
+if(map.containsKey(sum-A[i]){
+System.out.println("pair found at index :"+ map.get(sum-A[i]) + "and "+ i);
+return 
+}
+map.put(A[i], i);
+
+
+2. Sort binary array in linear time
+https://www.techiedelight.com/sort-binary-array-linear-time/
+a. Ans: using count of zero, replace array with zero the rest with one
+b. Partitioning logic of quick sorta.
+	public static void sort(int[] A) {
+		int pivot = 1;
+		int j = 0;
+		// each time we encounter a 0, j is incremented and  0 is placed before the pivot
+		for (int i = 0; i < A.length; i++)	{
+			if (A[i] < pivot) {
+				swap(A, i, j);
+				j++;
+			}
+		}
+	}
+
+3. Find a duplicate element in a limited range array
+https://www.techiedelight.com/find-duplicate-element-limited-range-array/
+a> maintain another arrat of visited, if it is not visited, if found again, then duplicate
+b.) mark the array values negative  if the val-1 is positive othersie return value as it is duplicate 
+c) xor of array elements and xor of all value in range, return xor
+d) sum formula = n*(n-1)/2- array sum
+
