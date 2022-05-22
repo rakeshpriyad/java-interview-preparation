@@ -32,7 +32,7 @@ A user can:
 npm install -g json-server
 ```
 
-- Download or clone the repository in your local (https://github.com/diana-moreno/crud-redux-saga.git).
+
 
 - Install dependencies running the command:
 ```

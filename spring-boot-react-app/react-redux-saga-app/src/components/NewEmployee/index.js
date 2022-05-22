@@ -4,7 +4,7 @@ import { addEmployeeAction } from '../../actions/employees-actions'
 import { showAlert, hideAlertAction } from '../../actions/alert-actions'
 import './index.css'
 
-const Newemployee = ({ history }) => {
+const NewEmployee = ({ history }) => {
   const [firstName, setFirstName] = useState('')
   const [lastName, setLastName] = useState('')
   const [emailId, setEmailId] = useState('')
@@ -88,4 +88,4 @@ const Newemployee = ({ history }) => {
   )
 }
 
-export default Newemployee
+export default NewEmployee
