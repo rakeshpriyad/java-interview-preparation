@@ -81,8 +81,9 @@ export const deleteAllEmployees = () => async (dispatch) => {
 
 export const findEmployeesByFirstName = (firstName) => async (dispatch) => {
   try {
+    console.log("service: findEmployeesByFirstName: ");
     const res = await EmployeeDataService.findEmployeesByFirstName(firstName);
-
+    console.log("service: findEmployeesByFirstName: "+JSON.stringify(res));
     dispatch({
       type: RETRIEVE_EMPLOYEES,
       payload: res.data,

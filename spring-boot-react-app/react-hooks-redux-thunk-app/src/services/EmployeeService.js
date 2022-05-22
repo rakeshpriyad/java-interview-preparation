@@ -27,7 +27,8 @@ const removeAll = () => {
 };
 
 const findEmployeesByFirstName = firstName => {
-  return http.get(`/employees?name=${firstName}`);
+  console.log("service: findEmployeesByFirstName: "+ firstName)
+  return http.get(`/employees/firstName?firstName=${firstName}`);
 };
 
 const EmployeeService = {

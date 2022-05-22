@@ -19,7 +19,7 @@ const EmployeesList = () => {
     dispatch(retrieveEmployees());
   }, []);
 
-  const onChangeSearchTitle = e => {
+  const onChangeSearchFirstName = e => {
     const firstName = e.target.value;
     setFirstName(firstName);
   };
@@ -47,7 +47,8 @@ const EmployeesList = () => {
 
   const findByFirstName = () => {
     refreshData();
-    dispatch(findByFirstName(firstName));
+    console.log("findByFirstName"+ firstName)
+    dispatch(findEmployeesByFirstName(firstName));
   };
 
   return (
@@ -59,13 +60,13 @@ const EmployeesList = () => {
             className="form-control"
             placeholder="Search by First Name"
             value={firstName}
-            onChange={onChangeSearchTitle}
+            onChange={onChangeSearchFirstName}
           />
           <div className="input-group-append">
             <button
               className="btn btn-outline-secondary"
               type="button"
-              onClick={findEmployeesByFirstName}
+              onClick={findByFirstName}
             >
               Search
             </button>
