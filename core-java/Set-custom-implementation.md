@@ -1,5 +1,5 @@
 ```
-package com.test.custom; /**
+package com.test.custom; 
 /**
  * This class provides custom implementation of HashSet(without using java api's- we will be using HashMapCustom)- which allows does not allow you to store duplicate values.
  * Note- implementation does not allow you to store null values.
