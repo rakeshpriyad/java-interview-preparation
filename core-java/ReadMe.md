@@ -43,9 +43,9 @@
 
 > Read [Producer Consumer ReentrantLock](Producer-Consumer-pattern-Custom-implementation-ReentrantLock.md)
 
-> Read [Producer Consumer Wait-notify](Producer-Consumer-pattern-Custom-implementation-Wait-notify.md)
+> Read [Producer Consumer wait notify](Producer-Consumer-pattern-Custom-implementation-Wait-notify.md)
 
-> Read [Producer Consumer Wait-notify](Producer-Consumer-pattern-Custom-implementation-Without-wait-notify.md)
+> Read [Producer Consumer Without wait notify](Producer-Consumer-pattern-Custom-implementation-Without-wait-notify.md)
 
 > Read [Busy Spin](Busy-Spin.md)
 
